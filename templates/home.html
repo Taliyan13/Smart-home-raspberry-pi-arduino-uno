@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Smart Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body id="myPage">
+
+<!-- Sidebar on click -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-large" style="display:none;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-display-topright w3-text-teal">Close
+    <i class="fa fa-remove"></i>
+  </a>
+  <a href="#" class="w3-bar-item w3-button">Link 1</a>
+  <a href="#" class="w3-bar-item w3-button">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button">Link 3</a>
+  <a href="#" class="w3-bar-item w3-button">Link 4</a>
+  <a href="#" class="w3-bar-item w3-button">Link 5</a>
+</nav>
+
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="/home" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Home</a>
+  <a href="/update_form" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+ </div>
+
+
+
+<!-- Image Header -->
+<div class="w3-display-container w3-animate-opacity">
+  <img src="/static/logo2.png" alt="boat" style="width:100%;min-height:150px;max-height:300px;">
+  <div class="w3-container w3-display-bottomleft w3-margin-bottom">  
+    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-xlarge w3-theme w3-hover-teal" title="Go To W3.CSS">Smart home application</button>
+  </div>
+</div>
+
+
+<!-- Team Container -->
+<div class="w3-container w3-padding-64 w3-center" id="team">
+<h2>Hello, </h2>
+<h3>What action would you like to do</h3>
+
+<div class="w3-row"><br>
+
+<div class="w3-third">
+  <a href="/home" method="GET"><img src="/static/ok.png" alt="Boss" style="width:35%" class="w3-circle w3-hover-opacity"></a>
+  <h3>I'm OK</h3>
+</div>
+
+<div class="w3-third">
+  <img src="/static/temp.png" alt="Boss" style="width:35%" class="w3-circle w3-hover-opacity">
+  <h4>Temperature: {{temp}}%</h4>
+  <h4>Humidty: {{humidity}}%</h4>
+</div>
+
+<div class="w3-third">
+  <a href="/home" ><img src="/static/panicbutton.png" alt="Boss" style="width:35%" class="w3-circle w3-hover-opacity"></a>
+
+    <a href="/systemControl/panicButtonMainPage/on"class="button"></a>
+    <a href="/systemControl/panicButtonMainPage/off"class="button"></a> <br/>
+  <h3>Panic button</h3>
+  <p>Click here to call for help</p>
+</div>
+</div>
+
+<div class="w3-row"><br>
+
+<div class="w3-quarter">
+  <a href="/securitySystem" ><img src="/static/security.png" alt="Boss" style="width:60%" class="w3-circle w3-hover-opacity"></a>
+  <h3>Security system</h3>
+</div>
+
+<div class="w3-quarter">
+  <a href="/shutter" ><img src="/static/shutter.png"  alt="Boss" style="width:60%" class="w3-circle w3-hover-opacity"></a>
+  <h3>Shutter system</h3>
+  <p>The Shutter system is {{shutter}}</p>
+</div>
+
+<div class="w3-quarter">
+  <a href="/heartbeat" ><img src="/static/heartbeat.png" alt="Boss" style="width:60%" class="w3-circle w3-hover-opacity"></a>
+  <h3>Heartbeat</h3>
+</div>
+
+<div class="w3-quarter">
+  <a href="/aircondition" ><img src="/static/fan.png"alt="Boss" style="width:60%" class="w3-circle w3-hover-opacity"></a>
+  <h3>Air condition system</h3>
+  <p>The ventilation is {{ventilation}}</p>
+</div>
+
+</div>
+</div>
+
+<!-- row2-->
+<div class="w3-container w3-padding-64 w3-center" id="team2">
+<div class="w3-row"><br>
+
+<div class="w3-quarter">
+  <a href="/safety" ><img src="/static/safty.png"alt="Boss" style="width:60%" class="w3-circle w3-hover-opacity"></a>
+  <h3>Safty system</h3>
+</div>
+
+<div class="w3-quarter">
+  <a href="/lighting" ><img src="/static/light.png" alt="Boss" style="width:60%" class="w3-circle w3-hover-opacity"></a>
+  <h3>lighting system</h3>
+</div>
+
+<div class="w3-quarter">
+  <a href="/health" ><img src="/static/health.png" alt="Boss" style="width:60%" class="w3-circle w3-hover-opacity"></a>
+  <h3>Health system</h3>
+</div>
+
+<div class="w3-quarter">
+  <a href="/wateringSystem" ><img src="/static/water.jpg" alt="Boss" style="width:60%" class="w3-circle w3-hover-opacity"></a>
+  <h3>Irrigation system</h3>
+</div>
+
+</div>
+</div>
+
+<script>
+// Script for side navigation
+function w3_open() {
+  var x = document.getElementById("mySidebar");
+  x.style.width = "300px";
+  x.style.paddingTop = "10%";
+  x.style.display = "block";
+}
+
+// Close side navigation
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>

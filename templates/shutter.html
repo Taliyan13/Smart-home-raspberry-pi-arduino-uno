@@ -1,0 +1,33 @@
+<!DOCTYPE html> 
+  <head> 
+     <title>Shutter system</title> 
+  </head> 
+  <body>
+    <h1>Shutter system</h1> 
+	  <div>
+		<h2>System status</h2>
+		<h3 fill="#ffffff" font-size="25" font-family="Verdana" x="150" y="160">The shutter is {{shutter}}</h3>
+		<br/>
+		<br/>
+	  </div>
+
+	  <div>
+	    <h3>System control</h3>
+	      {% if  value   == 1 %} 
+		  <a href="/systemControl/shutter/off"class="button">TURN OFF</a> 
+	      {% else %} 
+		  <a href="/systemControl/shutter/on" class="button">TURN ON</a>  
+	      {% endif %}
+	  </div>
+	  
+	  <div>
+		<h2>open and close shutter - light sensor data</h2>
+		<h3 fill="#ffffff" font-size="25" font-family="Verdana" x="150" y="160">Light sensor data: {{light_stutterpage_value}}</h3>
+		<h3 fill="#ffffff" font-size="25" font-family="Verdana" x="150" y="160">The shutter is {{shutter}}</h3>
+		<br/>
+		<br/>
+		
+	      <br/><br/><br/>
+	      <button onclick="location.href='/home'">return to home page</button>
+	  </div>
+  </body>

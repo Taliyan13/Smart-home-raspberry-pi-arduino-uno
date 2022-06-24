@@ -1,0 +1,46 @@
+<!DOCTYPE html> 
+  <head> 
+     <title>Ligthing control system</title> 
+  </head> 
+  <body>
+  <div>
+    <h1>Ligthing control system</h1>
+        <h2> Bedroom ==>  {{ bedroom_light  }}  ==>   
+            {% if  bedroom_light   == 1 %} 
+                <a href="/systemControl/bedroomLight/off"class="button">TURN OFF</a> 
+            {% else %} 
+                <a href="/systemControl/bedroomLight/on" class="button">TURN ON</a>  
+            {% endif %} 
+        </h2> 
+        <h2> Living room ==>  {{ livingroom_light  }}  ==>   
+            {% if  livingroom_light   == 1 %} 
+                <a href="/systemControl/livingroomLight/off"class="button">TURN OFF</a> 
+            {% else %} 
+                <a href="/systemControl/livingroomLight/on" class="button">TURN ON</a>  
+            {% endif %}
+        </h2> 
+
+        <h2> Bathroom ==>  {{ bathroom_light  }}  ==>   
+            {% if  bathroom_light   == 1 %} 
+                <a href="/systemControl/bathroomLight/off"class="button">TURN OFF</a> 
+            {% else %} 
+                <a href="/systemControl/bathroomLight/on" class="button">TURN ON</a>  
+            {% endif %}
+        </h2> 
+        <h2> Garden ==>  {{ garden_light  }}  ==>   
+            {% if  garden_light   == 1 %} 
+                <a href="/systemControl/gardenLight/off"class="button">TURN OFF</a> 
+            {% else %} 
+                <a href="/systemControl/gardenLight/on" class="button">TURN ON</a>  
+            {% endif %}
+        </h2> 
+        <br/><br/>
+        <h2> Automatic emergency lighting</h2>
+        <input type="checkbox"/> Automatic emergency ligthing off
+        
+        <br/><br/><br/>
+        <button onclick="location.href='/home'">return to home page</button>
+        
+
+  </div>
+  </body>

@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+  <head> 
+     <title>security system</title> 
+  </head> 
+  <body>
+    <h1>Security system</h1> 
+	  <div>
+		<h2>System status</h2>
+		<h3 fill="#ffffff" font-size="25" font-family="Verdana" x="150" y="160">Door lock: {{doorLock}}</h3>
+		<br/>
+		<br/>
+	  </div>
+
+	   <div>
+    <h3>
+            
+    <h3 fill="#ffffff" font-size="25" font-family="Verdana" x="150" y="160">add new fingerPrint</h3>
+      <form action='/add_or_delete_fingerprint/add' method="POST">
+	  <label>user ID </label>
+	  <input name="userAddID">
+	  <label>user name </label>
+	  <input name="userAddName">
+	  <button type="submit">add</button>
+      </form>
+      
+    </h3>
+    
+        <h3>
+    <h3 fill="#ffffff" font-size="25" font-family="Verdana" x="150" y="160">delete fingerPrint</h3>
+     <form action='/add_or_delete_fingerprint/delete' method="POST">
+	  <h4>user ID </h4>
+	  <input name="userDeleteID">
+	  <button type="submit">delete</button>
+      </form>
+      
+    </h3>
+    
+    
+  <h3>
+        <h3 fill="#ffffff" font-size="25" font-family="Verdana" x="150" y="160">open door</h3>
+     <form action='/add_or_delete_fingerprint/open' method="POST">
+	  <button type="submit">open</button>
+      </form>
+      
+    </h3>
+    <button onclick="location.href='/home'">return to home page</button>
+    
+	  </div>
+	  
+	   
+  
+  </body>
